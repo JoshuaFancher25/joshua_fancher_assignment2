@@ -1,0 +1,37 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+.navheading{
+    font-size: 50px; 
+}  
+
+.box{
+    height: 12px; 
+    width: 12px; 
+    border: 1px solid blue; 
+}
+
+.alive{
+    background-color: green; 
+}
+
+.boxRow{
+    display: flex; 
+}
+.makeCentered{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.make_heatmap{
+    background-color: darkgoldenrod;
+}
+#thediv{
+    background-color: darkgoldenrod;
+}
