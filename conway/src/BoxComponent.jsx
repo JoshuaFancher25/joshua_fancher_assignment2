@@ -142,24 +142,8 @@ export default function BoxComponent() {
     return (
         <div className="makeCentered">
             <div><Nav /></div>
-        
-            <p><h3>Living Cells: {livingCellsCount}</h3></p>
-           
-            <div id={isHeatmapActive ? "thediv" : undefined}>
-            {Array.from({ length: gridSize.height }).map((_, i) => (
-                <div key={i} className="boxRow">
-                    {Array.from({ length: gridSize.width }).map((_, j) => (
-                        <Box key={`${i}-${j}`} x={i} y={j} />
-                    ))}
-                </div>
-            ))}
-            </div>
-            <div>
-                <div>&nbsp;</div>
-                <button onClick={resetGrid}>Reset Grid</button>
-                <button onClick={progressSimulation}>Progress Simulation</button>
-                <div>&nbsp;</div>
-            </div>
+            <div>&nbsp;</div>
+
             <form onSubmit={handleSubmit}>
                 <label>
                     Height:
@@ -186,10 +170,31 @@ export default function BoxComponent() {
                 
                 <button type="submit">Submit</button>
             </form>
+            <div>
+                <div>&nbsp;</div>
+                <button onClick={resetGrid}>Reset Grid</button>
+                <button onClick={progressSimulation}>Progress Simulation</button>
+             
+                
+            <p><h3>Living Cells: {livingCellsCount}</h3></p>
+            
+            </div>
+            
+           
+            <div id={isHeatmapActive ? "thediv" : undefined}>
+            {Array.from({ length: gridSize.height }).map((_, i) => (
+                <div key={i} className="boxRow">
+                    {Array.from({ length: gridSize.width }).map((_, j) => (
+                        <Box key={`${i}-${j}`} x={i} y={j} />
+                    ))}
+                </div>
+            ))}
+            </div>
+            
             <div>&nbsp;</div>
             <button onClick={()=> toggleHeatMap()}>Heat Map</button>
            
-           
         </div>
+        
     );
 }
