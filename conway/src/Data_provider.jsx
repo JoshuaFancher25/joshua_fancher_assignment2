@@ -11,7 +11,7 @@ export function Data_provider(props){
 
     const[val, setVal] = useState({
         clickCount: 0, 
-         boxGrid: Array.from({ length: 40 }, () => Array.from({ length: 40 }, () => false)),
+         boxGrid: Array.from({ length: 39 }, () => Array.from({ length: 40 }, () => false)),
     
     }); 
 
